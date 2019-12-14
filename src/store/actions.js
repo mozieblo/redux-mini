@@ -1,13 +1,21 @@
 export const ADD_PERSON = 'ADD_PERSON';
 export const DELETE_PERSON = 'DELETE_PERSON';
 
-export const addPerson = ( name, age ) => {
+export const saveAddPerson = ( name, age ) => {
     return {
         type: ADD_PERSON,
         personData: {
             name,
             age
         }
+    }
+}
+
+export const addPerson = ( name, age ) => {
+    return dispatch => {
+        setTimeout( () => {
+            dispatch(saveAddPerson( name, age ))
+        }, 2000)
     }
 }
 
