@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import Person from '../components/Person/Person';
 import AddPerson from '../components/AddPerson/AddPerson';
 
-import * as actionCreators from '../store/actions';
+import * as actionCreators from '../store/actions/actions';
 
 class Persons extends Component {
     render () {
